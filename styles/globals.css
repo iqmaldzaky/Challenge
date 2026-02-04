@@ -5,3 +5,9 @@
 body {
   @apply bg-gray-50 text-gray-900;
 }
+
+/* dark mode body */
+.dark body {
+  background-color: #09283a;
+  color: #f3f4f6; /* text-gray-100 */
+}
