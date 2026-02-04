@@ -16,7 +16,7 @@ export default function Login() {
   const validateIdentifier = (value) => {
     if (!value) return 'Field wajib diisi'
     if (value.includes('@')) {
-      // simple email regex
+      // email
       if (!/^\S+@\S+\.\S+$/.test(value)) return 'Format email tidak valid'
     }
     return true
@@ -61,7 +61,7 @@ export default function Login() {
     <div className={`min-h-screen flex items-center justify-center bg-gray-50 p-4 relative ${loading ? 'overflow-hidden' : ''}`}>
       <div className="w-full max-w-6xl bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-md min-h-[60vh] md:min-h-[70vh]">
         <div className="grid grid-cols-1 md:grid-cols-2 items-stretch">
-          {/* left: form area */}
+          {/* left */}
           <div className="p-8 md:p-12 flex flex-col">
             <header className="mb-6">
               <div className="flex items-center justify-between">
@@ -127,7 +127,7 @@ export default function Login() {
             </div>
           </div>
 
-          {/* right: background image area */}
+          {/* right*/}
           <div
             className="hidden md:block bg-blue-900"
             style={{

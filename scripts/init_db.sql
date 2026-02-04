@@ -1,7 +1,6 @@
--- Run this as a user with sufficient privileges (eg. root)
+
 CREATE DATABASE IF NOT EXISTS auth_db;
 
--- Create user and grant privileges (adjust host if needed)
 CREATE USER IF NOT EXISTS 'challenge_user'@'localhost' IDENTIFIED BY 'P455w0rdChallenge!';
 GRANT ALL PRIVILEGES ON auth_db.* TO 'challenge_user'@'localhost';
 FLUSH PRIVILEGES;

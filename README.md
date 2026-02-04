@@ -8,7 +8,7 @@
 5. halaman login akan muncul (dilengkapi fitur dark mode toggle, animasi loading, validasi form, dan rate limit login)
 6. masukkan username/email (iqmaldz@gmail.com) dan password (iqmaldz123)
 7. register dahulu jika belum punya akun
-8. setelah login, anda akan diarahkan ke halaman dashboard
+8. setelah login, anda akan diarahkan ke halaman dashboard (protected route)
 9. klik logout.
 *tambahan: anda bisa cek rate limit login pada bagian Inspect-Network-fetch/XHR (ditandai status 429), atau ditandai dengan alert merah yang muncul diatas tanda sign in.  
 

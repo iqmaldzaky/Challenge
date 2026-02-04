@@ -11,7 +11,6 @@ export default async function handler(req, res) {
   const { identifier, password } = req.body
   if (!identifier || !password) return res.status(400).json({ error: 'Harap isi semua field' })
 
-  // Check rate limit (based on failed attempts)
   const { blocked, remaining, reset } = isBlocked(req, RATE_LIMIT_OPTS)
   res.setHeader('X-RateLimit-Limit', RATE_LIMIT_OPTS.max)
   res.setHeader('X-RateLimit-Remaining', remaining)
@@ -34,7 +33,6 @@ export default async function handler(req, res) {
       return res.status(401).json({ error: 'Password salah' })
     }
 
-    // successful login -> reset failed attempts for this IP
     resetAttempts(req)
 
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' })
